@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper-home">
+            <!-- BIO -->
+            <div class="white-block">
+              {%- if page.title -%}
+                <h1 class="home-heading">{{ page.title }}</h1>
+              {%- endif -%}
+            
+              <!-- <div class="g-left"></div> -->
+              <div class="home-content">
+                I am a 3rd-year Computer Science PhD student at Vanderbilt 
+                University in Dr. Taylor Johnson's Verification and Validation 
+                for Intelligent and Trustworthy Autonomy Laboratory (VeriVITAL). 
+                I am interested in research related to machine learning, reinforcement 
+                learning, interactive technologies, cybersecurity, and generative 
+                models and how they relate to trust in an area known as Trustworthy 
+                AI. I am honored to be supported by a National Defense Science and 
+                Engineering Graduate Fellowship.
+              </div>
+            </div>
+            
+            <div class="home-line"></div>
+            
+            <!-- NEWS -->
+            <div class="grey-block">
+                <h1 class="home-heading">News</h1>
+                <div class="home-content">
+                    <ul class="home-list">
+                        <li>
+                          <span class="home-news-meta">[Sept. 2022]</span> 
+                          Gave a talk at SEFM 2022 on "Training Agents to Satisfy 
+                          Timed and Untimed Signal Temporal Logic Specifications with 
+                          Reinforcement Learning."
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Sept. 2022]</span> 
+                            Attended the first Berlin Workshop on 
+                            Artificial Intelligence for Engineering 
+                            Applications (AI4EA).
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[May 2022]</span> 
+                            Headed to the DoD for the summer as a 
+                            cybersecurity engineering intern.
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Mar. 2022]</span> 
+                            Gave a talk at IEEE AeroConf on "Reinforcement 
+                            Learning Heuristics for Aerospace Control Systems."
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Dec. 2021]</span> 
+                            Passed my Preliminary Exam.
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Nov. 2021]</span> 
+                            Paper on "Reinforcement Learning Heuristics for 
+                            Aerospace Control Systems" accepted at IEEE Aerospace 2022!
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[May 2021]</span> 
+                            Headed to Air Force Research Laboratory (AFRL) for the summer 
+                            as a reinforcement learning research intern.
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Apr. 2021]</span> 
+                            Gave a talk on "Generative Models According to Tom Cruise" 
+                            for the VandyHacks Workshop Series.
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Apr. 2021]</span> 
+                            Honored to receive and accept a National Defense Science and 
+                            Engineering Graduate Fellowship. <b>(won/accepted)</b>
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Apr. 2021]</span> 
+                            Honored to receive a Science, Mathematics, and Research for 
+                            Transformation Scholarship. <b>(won)</b>
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Mar. 2021]</span> 
+                            Gave a talk on "Unmasking Reinforcement Learning" for 
+                            the VandyHacks Workshop Series.
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Feb. 2021]</span> 
+                            Gave a talk on "An Introduction to Artificial Intelligence" 
+                            for the VandyHacks Workshop Series.
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Jan. 2021]</span> 
+                            Teaching Assistant for <i>Intermediate 
+                            Software Design (CS3251)</i>. (Spring 2021)
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Sept. 2021]</span> 
+                            [Teaching Assistant for <i>Introduction to Engineering, Computer 
+                            Science Modules (ES1401/ES1402/ES1403)</i>. (Fall 2020)
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Aug. 2020]</span> 
+                            Headed to Vanderbilt University to start my PhD.
+                        </li>
+                      </ul>
+                </div>
+            </div>
+            
+            
+            <div class="home-line"></div>
+            
+            <!-- PUBS -->
+            <div class="white-block">
+                <h1 class="home-heading">Publications</h1>
+                <div class="home-content">
+                    <ul class="home-publist">
+                        <li>
+                          <span class="home-pubs-meta">[1]</span> 
+                          “Myoelectric control of prosthetics and robotics,” Bulletin of 
+                          the American Physical Society, vol. 63, 2018.<span class="home-note">*</span>
+                        <li>
+                            <span class="home-pubs-meta">[2]</span> 
+                            “Automated detection of corrosion in used nuclear 
+                            fuel dry storage canisters using residual neural networks,” 
+                            Nuclear Engineering and Technology, vol. 53, no. 2, pp. 657–665, 2021.
+                        </li>
+                        <li>
+                            <span class="home-pubs-meta">[3]</span> 
+                            “Reinforcement learning heuristics for aerospace 
+                            control systems,” IEEE Aerospace, 2022.<span class="home-note">*</span>
+                        </li>
+                        <li>
+                            <span class="home-pubs-meta">[4]</span> 
+                            “Training agents to satisfy timed and untimed signal 
+                            temporal logic specifications with 	reinforcement learning,” 
+                            in International Conference on Software Engineering and Formal 	
+                            Methods, pp. 190–206, Springer, 2022.
+                        </li>
+                        <li>
+                            <span class="home-pubs-meta">[5]</span> 
+                            “An empirical analysis of the use of real-time reachability for the safety assurance of 
+                            autonomous 	vehicles,” arXiv preprint arXiv:2205.01419, 2022.
+                        </li>
+                        <li>
+                            <span class="home-pubs-meta">[6]</span> 
+                            “STLgym: A tool for training agents to satisfy timed and untimed signal temporal logic 
+                            specifications with reinforcement learning,” FORMATS, 2022 (in review).
+                        </li>
+                      </ul>
+                      <span class="home-note">*</span> first author
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>

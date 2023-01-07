@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="white-block">
+            <h1 class="home-heading">{{page.title}}</h1>
+          
+            <!-- <div class="g-left"></div> -->
+            <div class="home-content">
+                {{ content }}
+            </div>
+          </div>
+        
+        <div class="white-block">
+            <div class="sand-row">
+              <div class="sand-column">
+                <!-- if html -->
+                <!-- <h2 class="project-heading"><a href="/projects/steg-test.html">Column 1</a></h2> -->
+                <!-- if md file: make sure permalink matches!!!!! -->
+                <h2 class="project-heading"><a href="/sandbox/projects/steg-lsb">Column 1</a></h2> 
+                    <div class="project-content"> This is a test</div>
+              </div>
+              <div class="sand-column">
+                <h2 class="project-heading">Column 2</h2>
+                <div class="project-content"> This is another test test</div>
+              </div>
+            </div>
+        </div>
+
+        <div class="grey-block">
+            <div class="sand-row">
+              <div class="sand-column">
+                <h2 class="project-heading">Column 3</h2>
+                    <div class="project-content"> This is a test</div>
+              </div>
+              <div class="sand-column">
+                <h2 class="project-heading">Column 4</h2>
+                <div class="project-content"> This is another test test</div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
