@@ -5,5 +5,4 @@ title:
 permalink: /cv/ # can be anything you want
 ---
 
-### This is a project
-blah blah blah
+Please click [here](/cv/pkrS23.pdf) for a copy of my CV. 
