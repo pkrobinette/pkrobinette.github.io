@@ -101,8 +101,6 @@ The secret message is therefore “0101 1001, 0110 1111”, which corresponds to
 
 ---
 
-## 2. Discrete Cosine Transform (DCT)
-
-# Resources
+## Resources
 
 - [https://medium.com/@stephanie.werli/image-steganography-with-python-83381475da57](https://medium.com/@stephanie.werli/image-steganography-with-python-83381475da57)
