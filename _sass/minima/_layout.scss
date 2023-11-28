@@ -281,13 +281,77 @@
     padding: 0;
    }
 
-   .grey-block {
+   .highlight {
+    color: $brand-color; /* Or any color you prefer for highlighting */
+    font-weight: bold; /* Optional, if you want the text to be bold */
+  }
+
+  @keyframes hover-vertical {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes hover-horizontal {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+  }
+  
+  .molecule {
+    position: absolute;
+    width: 75px; /* Adjust as needed */
+    height: 75px; /* Adjust as needed */
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+  }
+
+  .animation-container {
+    position: fixed; /* or absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures clicks pass through to content below */
+    z-index: 1; /* Keep it below the text content */
+  }
+
+  @media (min-width: 901px) { /* When the viewport is wider than 900px */
+    .molecule-left {
+      position: absolute;
+      left: calc((100vw - 900px) / 2 - 100px); /* Left of the center */
+      /* Other styles... */
+    }
+  
+    .molecule-right {
+      position: absolute;
+      right: calc((100vw - 900px) / 2 - 100px); /* Right of the center */
+      /* Other styles... */
+    }
+  }
+
+  @media (max-width: 900px) {
+    .molecule-left, .molecule-right {
+      /* Optional: hide or reposition for smaller screens */
+      display: none; /* Example: hides molecules on smaller screens */
+    }
+  }
+
+
+//   .page-content {
+//     /* Ensure your main content doesn't overlap with the molecules */
+//     margin-left: 100px;
+//     margin-right: 100px;
+// }
+
+
+  .grey-block {
     // border-top: 5px solid $grey-color-dark;
     // border-bottom: 1px solid $grey-color-light;
     // margin-top: 20px;
     margin: 0;
     background-color: $grey-color-light;
     padding: $spacing-head-unit 10px $spacing-head-unit;
+    z-index: 10;
    }
 
    .white-block {
@@ -297,6 +361,7 @@
     margin: 0;
     background-color: $background-color;
     padding: $spacing-head-unit 10px $spacing-head-unit;
+    z-index: 10;
    }
 
    .home-heading{
@@ -309,6 +374,7 @@
     // padding-top: 30px; // adds color to the margin
     // margin-top: 30px;
     // margin-bottom: 20px;
+    z-index: 10;
    }
 
    .home-content {
@@ -322,6 +388,7 @@
     padding-bottom: 20px;
     margin-right: auto;
     margin-left: auto;
+    z-index: 10;
    }
 
   .home-list {
