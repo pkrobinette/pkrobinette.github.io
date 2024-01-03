@@ -1,6 +1,7 @@
  /**
  * Site header
  */
+ 
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -14,7 +15,8 @@
   .site-title {
     // -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     //  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-    font-family: $apple-font;
+    // font-family: $apple-font;
+    font-family: 'Asap', sans-serif;
     @include relative-font-size(1.25);
     // font-size: large;
     font-weight: 300;
@@ -36,7 +38,9 @@
   .site-nav {
     float: right;
     line-height: $base-line-height * $base-font-size * 2.5;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    // font-family: $apple-font;
+    // font-family: $b
     // display: inline-block;
   
     .nav-trigger {
@@ -50,7 +54,7 @@
     .page-link {
     //   color: $text-color;
       font-size: large;
-      font-family: $apple-font;
+      font-family: $base-font-family;
       line-height: $base-line-height;
       color: $brand-color;
       letter-spacing: $apple-font-space;
@@ -389,7 +393,9 @@
     margin-right: auto;
     margin-left: auto;
     z-index: 10;
-   }
+    flex: 1; /* Takes up the remaining space */
+    padding-right: 2px; /* Adds some space between the text and the image */
+  }
 
   .home-list {
     // font-size: large;
@@ -434,6 +440,12 @@
 
   .home-line{
     border-top: 2px solid $grey-color-dark;
+  }
+
+  .div-line {
+    border-top: 0.5px solid $grey-color-dark;
+    width: 40%; /* Set the desired width */
+    margin: auto; /* Center the line */
   }
   
 
@@ -569,6 +581,7 @@
   // change what a page looks like
   .post-title {
     // font-family: $apple-font;
+    font-family: 'Asap', sans-serif;
     @include relative-font-size(2);
     // letter-spacing: $apple-font-space;
     line-height: 1;
@@ -583,6 +596,7 @@
   
   .post-content {
     margin-bottom: $spacing-unit;
+    font-family: 'Asap', sans-serif;
   
     h2 {
       @include relative-font-size(2);
@@ -608,3 +622,85 @@
       }
     }
   }
+  /**
+   * full screen image
+   */
+  .full-screen-image {
+    background-image: url('/images/open_road.jpg'); /* Replace with the correct path to your image */
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+}
+
+// .page-content {
+//     margin-top: 10vh; /* Push the content down by the height of the viewport */
+// }
+
+#location-text {
+  position: absolute; /* Fix position relative to the viewport */
+  bottom: 10px; /* Distance from the bottom of the viewport */
+  right: 10px; /* Distance from the right of the viewport */
+  font-size: 14px; /* Set the font size */
+  color: gray; /* Set the text color */
+  font-family: $base-font-family;
+}
+
+#location-title {
+  position: absolute; /* Fix position relative to the viewport */
+  top: 80%; /* Center vertically */
+  left: 43%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for the element's own size */
+  font-size: 36px; /* Set the font size */
+  color: white; /* Set the text color */
+  font-family: $base-font-family; /* Set font family */
+  cursor: pointer; /* Changes the cursor to indicate clickable item */
+  transition: color 0.3s ease; /* Optional: Smooth transition for color change */
+}
+
+#location-title:hover {
+  color: $brand-color; /* Change to a color that suits your design */
+  text-decoration: underline; /* Optional: Adds an underline on hover */
+  /* You can add other hover effects like font-weight: bold; if desired */
+}
+
+
+/**************************************************/
+/* Profile image and description. */
+
+.home-all {
+  display: flex; /* Enables Flexbox */
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: space-between; /* Spaces out the children */
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $content-width; /* Set the max content width */
+
+}
+
+#intro-image {
+  flex-basis: 12em; /* Adjust the size of the image container */
+  max-width: 10em; /* Ensures the image container doesn't grow too large */
+  max-height: 10em;
+  margin-left: 10px; /* Space between text and image */
+  // overflow: hidden;
+
+}
+
+#intro-image img {
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes bottom margin/whitespace inherent to inline elements */
+  border-radius: 10px; /* Adjust as needed */
+
+}
+
+
+/***************************************************/
+/* Buttons group */
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+

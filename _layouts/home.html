@@ -1,36 +1,62 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+<head>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    </style>
+</head>
 
 {%- include head.html -%}
 
     <body>
-    <div class="animation-container"></div>
-    {%- include header.html -%}
-    <!-- <div class="molecule-left"></div> -->
+    <!-- ADD THIS BACK FOR ANIMATIONS!! -->
+    <!-- <div class="animation-container"></div> -->
+    <div class="full-screen-image">
+        <span id="location-text">Shoshone, CA. Shot on iPhone. 2023.</span>
+        <span id="location-title" onclick="scrollDown()">Preston Robinette</span>
+    </div>
     <main class="page-content" aria-label="Content">
         <div class="wrapper-home">
             <!-- BIO -->
             <div class="white-block">
-                {%- if page.title -%}
-                <h1 class="home-heading">{{ page.title }}</h1>
-                {%- endif -%}
+                <h1 class="home-heading">Preston Robinette</h1>
             
-                <!-- <div class="g-left"></div> -->
-                <div class="home-content">
-                I am a <span class="highlight">4th-year</span> Computer Science PhD student at Vanderbilt 
-                University in Dr. Taylor Johnson's Verification and Validation 
-                for Intelligent and Trustworthy Autonomy Laboratory <a href="http://www.taylortjohnson.com/">(VeriVITAL)</a>. 
-                I am interested in research related to <span class="highlight">machine learning applications, reinforcement 
-                learning, generative AI, interactive technologies, and cybersecurity</span>. I am honored to be supported by a National Defense Science and 
-                Engineering Graduate Fellowship (NDSEG Fellow).
+                <div class="home-all">
+                    <div class="home-content">
+                        Hi, there! I am a <span class="highlight">4th-year</span> Computer Science PhD student at Vanderbilt 
+                        University in Dr. Taylor Johnson's Verification and Validation 
+                        for Intelligent and Trustworthy Autonomy Laboratory <a href="http://www.taylortjohnson.com/">(VeriVITAL)</a>. 
+                        I am interested in research related to <span class="highlight">machine learning applications, reinforcement 
+                        learning, generative AI, interactive technologies, and cybersecurity</span>. I am honored to be supported by a National Defense Science and 
+                        Engineering Graduate Fellowship (NDSEG Fellow).
+                    </div>
+                    <div id="intro-image">
+                        <img src="/images/Headshot.jpg">
+                    </div>
                 </div>
             </div>
+
+            <div class="home-content">
+            <br>
+            <a href="https://github.com/pkrobinette">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://scholar.google.com/citations?user=FzdIX4AAAAAJ&hl=en">G. Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://linkedin.com/in/prestonrobinette">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/cv/CV_F23.pdf">CV</a>
+            <br>
+            preston dot k dot robinette at vanderbilt dot edu
+            <br><br>
+            </div>>
             
-            <div class="home-line"></div>
+            <div class="div-line"></div>
             
             <!-- NEWS -->
-            <div class="grey-block">
-                <h1 class="home-heading">News</h1>
+            <div class="white-block">
+                <h1 class="home-heading">Recent News</h1>
                 <div class="home-content">
                     <ul class="home-list">
                         <li>
@@ -158,11 +184,11 @@
             </div>
             
             
-            <div class="home-line"></div>
+            <div class="div-line"></div>
             
             <!-- PUBS -->
             <div class="white-block">
-                <h1 class="home-heading">Publications</h1>
+                <h1 class="home-heading">Selected Publications</h1>
                 <div class="home-content">
                     <ul class="home-publist">
                         <li>
@@ -273,7 +299,18 @@
             addMolecules(15, 'purple'); // Adjust the count and color as needed
         };
 
+        function scrollDown() {
+        // Scroll down by the height of the viewport
+        window.scrollBy({
+            top: window.innerHeight, // Vertical scroll equal to the viewport's height
+            left: 0, // No horizontal scroll
+            behavior: 'smooth' // Smooth scrolling
+        });
+    }
+
     </script>
+
+
 
 
 
