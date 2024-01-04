@@ -2,11 +2,6 @@
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 <head>
-    <!-- Isotope JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,10 +28,10 @@
             
                 <div class="home-all">
                     <div class="home-content">
-                        Hi, there! I am a <span class="highlight-word">4th-year</span> Computer Science PhD student at Vanderbilt 
+                        Hi, there! I am a <span class="highlight">4th-year</span> Computer Science PhD student at Vanderbilt 
                         University in Dr. Taylor Johnson's Verification and Validation 
                         for Intelligent and Trustworthy Autonomy Laboratory <a href="http://www.taylortjohnson.com/">(VeriVITAL)</a>. 
-                        I am interested in research related to <span class="highlight-word">machine learning applications, reinforcement 
+                        I am interested in research related to <span class="highlight">machine learning applications, reinforcement 
                         learning, generative AI, interactive technologies, and cybersecurity</span>. I am honored to be supported by a National Defense Science and 
                         Engineering Graduate Fellowship (NDSEG Fellow).
                     </div>
@@ -47,6 +42,7 @@
             </div>
 
             <div class="home-content">
+            <br>
             <a href="https://github.com/pkrobinette">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://scholar.google.com/citations?user=FzdIX4AAAAAJ&hl=en">G. Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://linkedin.com/in/prestonrobinette">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -58,61 +54,57 @@
             
             <div class="div-line"></div>
 
-
             <div id="filters" class="button-group">
                 <!-- <button class="button" data-filter="*">Show All</button> -->
-                <button class="button is-checked" data-filter=".highlight">Highlights</button>
+                <button class="button is-checked" data-filter=".news">News</button>
                 <button class="button" data-filter=".publication">Research</button>
-                <!-- <button class="button" data-filter=".talk">Talks</button> -->
+                <button class="button" data-filter=".post">Sandbox</button>
                 <!-- <button class="button" data-filter=".misc">Misc</button> -->
             </div>
-        
-            <div class="grid">
-        
-                <!-- Highlights -->
-                <div class="list-item highlight home-list" data-category="highlight">
-                Some recent highlights:
-                </div>
 
-                <!-- Truncated Set of Highlights (Shown by Default) -->
-                <div id="main-highlights">
-                    <div class="list-item highlight" data-category="highlight">
-                        <ul class="home-list">
-                            <li>
-                                <span class="home-news-meta">[Oct. 2023]</span> 
-                                Gave a talk at AISoLa 2023: Bridging the Gap
-                                Between AI and Reality on "Benchmark: Neural Network Malware
-                                Classification."
-                            </li>
-                            <li>
-                                <span class="home-news-meta">[Sept. 2023]</span> 
-                                Gave a talk at European Conference on Artificial Intelligence (ECAI) 2023 on "SUDS: Sanitizing Universal and Dependent
-                                Steganography."
-                            </li>
-                            <li>
-                                <span class="home-news-meta">[Sept. 2023]</span> 
-                                Attended the Grace Hopper Conference 2023 in Orlando, FL.
-                            </li>
-                            <li>
-                                <span class="home-news-meta">[July 2023]</span> 
-                                Gave a talk at National Defense Science and Graduate 
-                                Fellowship Conference 2023 on "Self-Preserving Genetic 
-                                Algorithms for Safe Learning in Discrete Action Spaces."
-                            </li>
-                            <li>
-                                <span class="home-news-meta">[May 2023]</span> 
-                                Headed to Apple for the summer as a 
-                                machine learning engineering intern.
-                            </li>
-                        </ul>
-                    </div>
-        
-                </div>
+
+
+
+            <div class="grid">
+
+                <!-- Recent news -->
+                <div id='main-news' class="list-content" data-category="news">
+                    Some recent news:
+                    <br><br>
+                    <ul class="home-list">
+                        <li>
+                            <span class="home-news-meta">[Oct. 2023]</span> 
+                            Gave a talk at AISoLa 2023: Bridging the Gap
+                            Between AI and Reality on "Benchmark: Neural Network Malware
+                            Classification."
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Sept. 2023]</span> 
+                            Gave a talk at European Conference on Artificial Intelligence (ECAI) 2023 on "SUDS: Sanitizing Universal and Dependent
+                            Steganography."
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[Sept. 2023]</span> 
+                            Attended the Grace Hopper Conference 2023 in Orlando, FL.
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[July 2023]</span> 
+                            Gave a talk at National Defense Science and Graduate 
+                            Fellowship Conference 2023 on "Self-Preserving Genetic 
+                            Algorithms for Safe Learning in Discrete Action Spaces."
+                        </li>
+                        <li>
+                            <span class="home-news-meta">[May 2023]</span> 
+                            Headed to Apple for the summer as a 
+                            machine learning engineering intern.
+                        </li>
+                    </ul>
+                </div>>
         
                 <!-- All Archived Highlights (Click to Show) -->
-                <div id="more-highlights" style="display: None">
-        
-                    <div class="list-item highlight" data-category="highlight">
+                <div class="list-content" id="more-news" style="display: None" data-category="news">
+                    Some recent news:
+                    <br><br>
                     <ul class="home-list">
                         <li>
                             <span class="home-news-meta">[Oct. 2023]</span> 
@@ -235,160 +227,112 @@
                             Headed to Vanderbilt University to start my PhD.
                         </li>
                     </ul>
-                    </div>
-        
                 </div>
         
                 <!-- Toggle highlights button. -->
-                <div class="list-item highlight home-list" data-category="highlight">
-                    <a id="toggle_highlights_button" href="javascript:toggle_highlights()">Show more</a>
+                <div class="list-content" data-category="news">
+                    <a id="toggle_main_button" href="javascript:toggle_news()">Show more</a>
                 </div>
-        
-        
-        
-        
+
                 <!-- Publications -->
-                <div class="list-item publication" data-category="publication">
+                <div class="list-content publication" data-category="publication">
                     <div class="thumbnail">
-                        <img src="/thumbnails/malware.png" alt="" />
-                    </div>
-                    <div class="project-description">
-                        <h3><a href="https://link.springer.com/chapter/10.1007/978-3-031-46002-9_17">Benchmark: Neural Network Malware Classification</a></h3>
-                            <p>
-                            <span class="highlight-name">Preston K. Robinette,</span> Diego Manzanas Lopez, Taylor T. Johnson<br>
-                            <a href="https://link.springer.com/chapter/10.1007/978-3-031-46002-9_17">PDF</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                            <a href="https://github.com/pkrobinette/malware_benchmarks">Code</a>
-                            <br> 
-                        </p>
-                    </div>
-                </div> 
-                
-                
-                <div class="list-item publication" data-category="publication">
-                    <div class="thumbnail">
-                        <img src="/thumbnails/suds.png" alt="" />
+                        <img src="/thumbnails/suds_diagram.jpg" alt="" />
                     </div>
                     <div class="project-description">
                         <h3><a href="https://ebooks.iospress.nl/doi/10.3233/FAIA230489">SUDS: Sanitizing Universal and Dependent Steganography</a></h3>
                             <p>
-                            <span class="highlight-name">Preston K. Robinette,</span> Hanchen David Wang, Nishan Shehadeh, Daniel Moyer, Taylor T. Johnson<br>
+                            Preston K Robinette, Hanchen David Wang, Nishan Shehadeh, Daniel Moyer, Taylor T Johnson<br>
                             <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA230489">PDF</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
                             <a href="https://github.com/pkrobinette/suds-ecai-2023">Code</a>
                             <br> 
                         </p>
                     </div>
-                </div>  
+                    </div>
 
-                <div class="list-item publication" data-category="publication">
+                </div>
+
+                <!-- SANDBOX -->
+                <div class="list-content publication" data-category="post">
                     <div class="thumbnail">
-                        <img src="/thumbnails/spga.png" alt="" />
+                        <img src="/thumbnails/suds_diagram.jpg" alt="" />
                     </div>
                     <div class="project-description">
-                        <h3><a href="https://dl.acm.org/doi/abs/10.1145/3576841.3585936">Self-Preserving Genetic Algorithms for Safe Learning in Discrete Action Spaces</a></h3>
+                        <h3><a href="https://ebooks.iospress.nl/doi/10.3233/FAIA230489">SUDS: Sanitizing Universal and Dependent Steganography</a></h3>
                             <p>
-                            <span class="highlight-name">Preston K. Robinette,</span>  Nathaniel P. Hamilton, Taylor T. Johnson<br>
-                            <a href="https://dl.acm.org/doi/abs/10.1145/3576841.3585936">PDF</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                            <a href="https://github.com/pkrobinette/spga">Code</a>
+                            Preston K Robinette, Hanchen David Wang, Nishan Shehadeh, Daniel Moyer, Taylor T Johnson<br>
+                            <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA230489">PDF</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                            <a href="https://github.com/pkrobinette/suds-ecai-2023">Code</a>
                             <br> 
                         </p>
                     </div>
-                </div>    
+                    </div>
 
-                <div class="list-item publication" data-category="publication">
-                    <div class="thumbnail">
-                        <img src="/thumbnails/spga_demo.png" alt="" />
-                    </div>
-                    <div class="project-description">
-                        <h3><a href="https://dl.acm.org/doi/abs/10.1145/3576841.3589635">DEMO: Self-Preserving Genetic Algorithms vs. Safe Reinforcement Learning in Discrete Action Spaces</a></h3>
-                            <p>
-                            <span class="highlight-name">Preston K. Robinette,</span>  Nathaniel P. Hamilton, Taylor T. Johnson<br>
-                            <a href="https://dl.acm.org/doi/abs/10.1145/3576841.3589635">PDF</a>
-                            <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp; -->
-                            <!-- <a href="https://github.com/pkrobinette/spga">Code</a> -->
-                            <br> 
-                        </p>
-                    </div>
-                </div> 
+                </div>
 
-                <div class="list-item publication" data-category="publication">
-                    <div class="thumbnail">
-                        <img src="/thumbnails/stlgym.png" alt="" />
-                    </div>
-                    <div class="project-description">
-                        <h3><a href="https://link.springer.com/chapter/10.1007/978-3-031-17108-6_12">Training Agents to Satisfy Timed and Untimed Signal Temporal Logic Specifications with Reinformcement Learning</a></h3>
-                            <p>
-                            Nathaniel P. Hamilton <span class="highlight-name">Preston K. Robinette,</span> Taylor T. Johnson<br>
-                            <a href="https://link.springer.com/chapter/10.1007/978-3-031-17108-6_12">PDF</a>
-                            &nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                            <a href="https://github.com/nphamilton/stl-gym">Code</a>
-                            <br> 
-                        </p>
-                    </div>
-                </div> 
-
-                <div class="list-item publication" data-category="publication">
-                    <div class="thumbnail">
-                        <img src="/thumbnails/aero.png" alt="" />
-                    </div>
-                    <div class="project-description">
-                        <h3><a href="https://ieeexplore.ieee.org/abstract/document/9843224">Reinforcement Learning Heuristics for Aerospace Control Systems</a></h3>
-                            <p>
-                            <span class="highlight-name">Preston K. Robinette,</span>  Ben K. Heiner, Umberto Ravaioli, Nathaniel P. Hamilton, Taylor T. Johnson, Kerianne L. Hobbs<br>
-                            <a href="https://ieeexplore.ieee.org/abstract/document/9843224">PDF</a>
-                            <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp; -->
-                            <!-- <a href="https://github.com/pkrobinette/spga">Code</a> -->
-                            <br> 
-                        </p>
-                    </div>
-                </div> 
-
-                <div class="list-item publication" data-category="publication">
-                    <div class="thumbnail">
-                        <img src="/thumbnails/control.png" alt="" />
-                    </div>
-                    <div class="project-description">
-                        <h3><a href="https://doi.org/10.1109/ICAA52185.2022.00010">On using real-time reachability for the safety assurance of machine learning controllers</a></h3>
-                            <p>
-                            Patrick Musau, <span class="highlight-name">et al.</span><br>
-                            <a href="https://doi.org/10.1109/ICAA52185.2022.00010">PDF</a>
-                            <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp; -->
-                            <!-- <a href="https://github.com/pkrobinette/spga">Code</a> -->
-                            <br> 
-                        </p>
-                    </div>
-                </div> 
-
-                <div class="list-item publication" data-category="publication">
-                    <div class="thumbnail">
-                        <img src="/thumbnails/nuclear.png" alt="" />
-                    </div>
-                    <div class="project-description">
-                        <h3><a href="https://doi.org/10.1016/j.net.2020.07.020">Automated detection of corrosion in used nuclear fuel dry storage canisters using residual neural networks</a></h3>
-                            <p>
-                            Theodore Papamarkou, <span class="highlight-name">et al.</span><br>
-                            <a href="https://doi.org/10.1016/j.net.2020.07.020">PDF</a>
-                            <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp; -->
-                            <!-- <a href="https://github.com/pkrobinette/spga">Code</a> -->
-                            <br> 
-                        </p>
-                    </div>
-                </div> 
-
-
-
-                
-        
-                <!-- Talks -->        
-                <!-- <div class="list-item talk" data-category="talk">
-                    <p class="date">2023</p>Cornell <a href="https://www.cs.cornell.edu/content/fall-2023-robotics-seminar">Robotics Seminar</a>
+            </div>>
+            <!-- <div class="div-line"></div> -->
+            
+            <!-- PUBS
+            <div class="white-block">
+                <h1 class="home-heading">Selected Publications</h1>
+                <div class="home-content">
+                    <ul class="home-publist">
+                        <li>
+                            <span class="home-pubs-meta">[1]</span>
+                            "Benchmark: neural network malware classification. 
+                            In: AISoLA: International Symposium on Leveraging Applications
+                            of Formal Methods, 2023. <span class="home-note">*</span>
+                        </li>
+                        <li>
+                            <span class="home-pubs-meta">[2]</span>
+                            "SUDS: sanitizing universal and dependent steganography". European Conference on Artificial
+                            Intelligence (ECAI), vol.372, pp. 1978-1985, 2023. <span class="home-note">*</span>
+                        </li>
+                        <li>
+                            <span class="home-pubs-meta">[3]</span> 
+                            "Self-Preserving Genetic Algorithms for Safe Learning in Discrete Action Spaces." Proceedings of the ACM/IEEE 14th 
+                            International Conference on Cyber-Physical Systems (with CPS-IoT Week 2023). 2023.<span class="home-note">*</span>
+                        </li>
+                        <li>
+                            <span class = "home-pubs-meta">[4]</span>
+                            ""DEMO: Self-Preserving Genetic Algorithms vs. Safe
+                            Reinforcement Learning in Discrete Action Spaces"Proceedings of the ACM/IEEE 14th 
+                            International Conference on Cyber-Physical Systems (with CPS-IoT Week 2023). 2023.<span class="home-note">*</span>
+                        </li>
+                        <li>
+                            <span class="home-pubs-meta">[5]</span> 
+                            “Automated detection of corrosion in used nuclear 
+                            fuel dry storage canisters using residual neural networks,” 
+                            Nuclear Engineering and Technology, vol. 53, no. 2, pp. 657–665, 2021.
+                        </li>
+                        <li>
+                            <span class="home-pubs-meta">[6]</span> 
+                            “Reinforcement learning heuristics for aerospace 
+                            control systems,” IEEE Aerospace, 2021.<span class="home-note">*</span>
+                        </li>
+                        <li>
+                            <span class="home-pubs-meta">[7]</span> 
+                            “Training agents to satisfy timed and untimed signal 
+                            temporal logic specifications with 	reinforcement learning,” 
+                            in International Conference on Software Engineering and Formal 	
+                            Methods, pp. 190–206, Springer, 2022.
+                        </li>
+                        <li>
+                            <span class="home-pubs-meta">[8]</span> 
+                            “An empirical analysis of the use of real-time reachability for the safety assurance of 
+                            autonomous 	vehicles,” arXiv preprint arXiv:2205.01419, 2022.
+                        </li>
+                        <li>
+                            <span class="home-pubs-meta">[9]</span> 
+                            “Myoelectric control of prosthetics and robotics,” Bulletin of 
+                            the American Physical Society, vol. 63, 2018.<span class="home-note">*</span>
+                        <li>
+                    </ul>
+                    <span class="home-note">*</span> first author
                 </div> -->
-        
-        
-                <!-- Services -->
-                <!-- <div class="list-item misc" data-category="misc">
-                    <p class="date">2023</p>Associate Editor, IEEE International Conference on Robotics and Automation (ICRA)
-                </div> -->
-        
+
+
             </div>
         </div>
     </main>
@@ -407,7 +351,7 @@
 
           // Isotope grid.
         var $grid = $('.grid').isotope({
-        itemSelector: '.list-item',
+        itemSelector: '.list-content',
         layoutMode: 'fitRows',
         transitionDuration: 0,
         stagger: 10,
@@ -467,22 +411,22 @@
             }
         }
 
-        function toggle_highlights() {
-        var x = document.getElementById("main-highlights");
-        var y = document.getElementById("more-highlights");
-        var b = document.getElementById("toggle_highlights_button")
-        if (y.style.display === "none") {
-          x.style.display = "none";
-          y.style.display = "block";
-          b.innerHTML = "Show less"
-          update_isotope();
-        } else {
-          x.style.display = "block";
-          y.style.display = "none";
-          b.innerHTML = "Show more"
-          update_isotope();
+        function toggle_news() {
+            var x = document.getElementById("main-news");
+            var y = document.getElementById("more-news");
+            var b = document.getElementById("toggle_news_button")
+            if (y.style.display === "none") {
+                x.style.display = "none";
+                y.style.display = "block";
+                b.innerHTML = "Show less"
+                update_isotope();
+            } else {
+                x.style.display = "block";
+                y.style.display = "none";
+                b.innerHTML = "Show more"
+                update_isotope();
+            }
         }
-      }
 
         update_isotope();
 

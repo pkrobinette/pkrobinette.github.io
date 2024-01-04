@@ -125,8 +125,10 @@
    * Site footer
    */
   .site-footer {
-    border-top: 1px solid $grey-color-light;
+    border-top: 0.5px solid $grey-color-light;
     padding: $spacing-unit 0;
+    padding-top: 2px;
+    padding-bottom:0px;
   }
   
   .footer-heading {
@@ -145,6 +147,7 @@
     color: $grey-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
+    font-size: 16px;
   }
   
   .footer-col {
@@ -255,6 +258,7 @@
   // padding: 0;
   margin-right: auto;
   margin-left: auto;
+  padding-bottom: 200px;
   // padding-right: $spacing-unit;
   // padding-left: $spacing-unit;
   @extend %clearfix;
@@ -285,9 +289,16 @@
     padding: 0;
    }
 
-   .highlight {
+   .highlight-word {
+    padding-top: 0px;
     color: $brand-color; /* Or any color you prefer for highlighting */
     font-weight: bold; /* Optional, if you want the text to be bold */
+  }
+  
+  .highlight {
+    padding-top: 0px;
+    color: $text-color;
+    // font-weight: bold;
   }
 
   @keyframes hover-vertical {
@@ -401,7 +412,7 @@
     // font-size: large;
     margin-left: 20px;
     list-style: square;
-  
+      
     > li {
       margin-bottom: $spacing-unit/2;
       // font-size: large;
@@ -444,7 +455,7 @@
 
   .div-line {
     border-top: 0.5px solid $grey-color-dark;
-    width: 40%; /* Set the desired width */
+    width: 900px; /* Set the desired width */
     margin: auto; /* Center the line */
   }
   
@@ -670,11 +681,12 @@
 
 .home-all {
   display: flex; /* Enables Flexbox */
-  align-items: center; /* Aligns items vertically in the center */
+  align-items: top; /* Aligns items vertically in the center */
   justify-content: space-between; /* Spaces out the children */
   margin-right: auto;
   margin-left: auto;
-  max-width: $content-width; /* Set the max content width */
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
 
 }
 
@@ -696,11 +708,203 @@
 }
 
 
-/***************************************************/
-/* Buttons group */
-.button-group:after {
+/**************************************************/
+/* Section buttons. */
+
+#menu {
+  display: flex;
+}
+
+.menu-item {
+  float: left;
+  margin-right: 2em;
+}
+
+h2 {
+  font-size: 1.6em;
+  line-height: 2.4em;
+  margin-top: 0.5em;
+  color: #a0a8b0;
+}
+
+.selected h2 {
+  color: #150c21;
+}
+
+.button {
+  @include relative-font-size(2);
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: $grey-color;
+  // font-size: 1.6em;
+  font-family:$base-font-family;
+  // line-height: 2.4em;
+  margin: 0 20px; /* Add horizontal space between buttons */
+  float: left;
+  padding: 0;
+}
+
+.button:hover {
+  color: $text-color;
+}
+
+.button:active,
+.button.is-checked {
+  color: $text-color;
+}
+
+.button-group {
+  text-align: center; /* Centers the buttons horizontally */
+  margin: auto; /* Optionally, ensure the group itself is centered */
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  background-color: $background-color;
+  padding: $spacing-head-unit 10px $spacing-head-unit;
+  z-index: 10;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+/**************************************************/
+/* Isotope grid list of items. */
+
+.grid {
+  padding-bottom: 6em;
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  flex: 1;
+  font-size: large;
+  padding-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* clear fix */
+.grid:after {
   content: '';
   display: block;
   clear: both;
 }
 
+.description {
+  margin-bottom: 1em;
+}
+
+.list-item {
+  width: 100%;
+  // line-height: 1em;
+  // margin-top: 1em;
+}
+
+.list-item p.date {
+  display: inline-block;
+  width: 3em;
+  color: #a0a8b0;
+  // color:green;
+}
+
+
+/**************************************************/
+/* List item publications */
+
+/**************************************************/
+/* Publication details (thumbnail media, title, and description). */
+
+.thumbnail {
+  /*  width: 21%;*/
+    width: 19%;
+    float: left;
+    margin-right: 2%;
+  }
+  
+  .thumbnail:hover {
+    border-bottom: none;
+  }
+  
+  .thumbnail img {
+    margin-top: 0.4em;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    max-height: 125px;
+    
+  }
+  
+  .thumbnail video {
+    margin-top: 0.4em;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  h3 {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  
+  h3 a {
+    color: #150c21;
+  }
+  
+  h3 a:hover {
+    color: rgb(20, 110, 190);
+  }
+  
+  .publication {
+    margin-bottom: 0.5em;
+  }
+  
+  .publication p {
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #a0a8b0;
+  }
+  
+  .project-description {
+    width: 78%;
+    float: left;
+    padding-top:8px;
+  }
+
+  .list-content {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    flex: 1;
+    font-size: large;
+    padding-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 10;
+    flex: 1; /* Takes up the remaining space */
+    padding-right: 2px; /* Adds some space between the text and the image */
+  }
+
+  .list-content p.date {
+    display: inline-block;
+    width: 3em;
+    color: #a0a8b0;
+  }
+
+  .list-more {
+
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    // flex: 1;
+    font-size: large;
+    padding-left: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 10px;
+    padding-top: -100px;
+  }
+
+  .highlight-name {
+    color: $grey-color-dark;
+    font-weight: 500;
+  }
