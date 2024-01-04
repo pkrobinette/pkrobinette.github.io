@@ -25,7 +25,7 @@
         <span id="location-text">Shoshone, CA. Shot on iPhone. 2023.</span>
         <span id="location-title" onclick="scrollDown()">Preston Robinette</span>
     </div>
-    <main class="page-content" aria-label="Content">
+    <main class="page-content" id="content-start" aria-label="Content">
         <div class="wrapper-home">
             <!-- BIO -->
             <div class="white-block">
@@ -396,14 +396,29 @@
     {%- include footer.html -%}
     <script>
 
-        function scrollDown() {
-        // Scroll down by the height of the viewport
-        window.scrollBy({
-            top: window.innerHeight, // Vertical scroll equal to the viewport's height
-            left: 0, // No horizontal scroll
-            behavior: 'smooth' // Smooth scrolling
+    //     function scrollDown() {
+    //     // Scroll down by the height of the viewport
+    //     window.scrollBy({
+    //         top: window.innerHeight, // Vertical scroll equal to the viewport's height
+    //         left: 0, // No horizontal scroll
+    //         behavior: 'smooth' // Smooth scrolling
+    //     });
+    // }
+
+    function scrollDown() {
+        // Find the element that marks the beginning of the content
+        var contentStart = document.getElementById('content-start');
+
+        // Get the position of the content start element relative to the top of the document
+        var topPosition = contentStart.getBoundingClientRect().top + window.scrollY;
+
+        // Scroll to the top position of the content start element
+        window.scrollTo({
+            top: topPosition,
+            left: 0,
+            behavior: 'smooth'
         });
-    }
+    }   
 
           // Isotope grid.
         var $grid = $('.grid').isotope({
@@ -445,7 +460,7 @@
             // Retrieve cached button click.
             var defaultFilterValue = localStorage.getItem('filterValue');
             if (defaultFilterValue == null) {
-                defaultFilterValue = ".news"
+                defaultFilterValue = ".highlight"
             }
             $grid.isotope({ filter: defaultFilterValue });
             var buttons = document.getElementsByClassName("button");
@@ -472,17 +487,17 @@
         var y = document.getElementById("more-highlights");
         var b = document.getElementById("toggle_highlights_button")
         if (y.style.display === "none") {
-          x.style.display = "none";
-          y.style.display = "block";
-          b.innerHTML = "Show less"
-          update_isotope();
+            x.style.display = "none";
+            y.style.display = "block";
+            b.innerHTML = "Show less"
+            update_isotope();
         } else {
-          x.style.display = "block";
-          y.style.display = "none";
-          b.innerHTML = "Show more"
-          update_isotope();
+            x.style.display = "block";
+            y.style.display = "none";
+            b.innerHTML = "Show more"
+            update_isotope();
         }
-      }
+    }
 
         update_isotope();
 
