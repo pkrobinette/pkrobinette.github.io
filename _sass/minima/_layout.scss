@@ -433,7 +433,7 @@
   .home-news-meta {
     // font-size: $small-font-size;
     color: $brand-color;
-    font-weight: bold;
+    // font-weight: bold;
   }
 
   .home-pubs-meta {
@@ -802,13 +802,29 @@ h2 {
   // margin-top: 1em;
 }
 
+.list-item.highlight {
+  display: flex;
+  align-items: top;
+}
+
 .list-item p.date {
   display: inline-block;
-  width: 3em;
+  width: 5em;
   color: #a0a8b0;
+  padding-bottom: 0px;
   // color:green;
 }
 
+.list-item p.month-date {
+  display: inline-block;
+  width: 5em;
+  color: $brand-color;
+  padding-bottom: 0px;
+  flex-shrink: 0; /* Prevents the date from shrinking */
+  margin-right: 3px; /* Adjust as needed for spacing */
+  white-space: nowrap; /* Keeps the date on one line */
+  // color:green;
+}
 
 /**************************************************/
 /* List item publications */
@@ -887,7 +903,7 @@ h2 {
 
   .list-content p.date {
     display: inline-block;
-    width: 3em;
+    width: 5em;
     color: #a0a8b0;
   }
 
@@ -907,4 +923,37 @@ h2 {
   .highlight-name {
     color: $grey-color-dark;
     font-weight: 500;
+  }
+
+  .experience-company {
+    color: $brand-color;
+  }
+
+  .experience-title {
+    color: $text-color;
+    font-weight: 700px;
+    font-style: italic;
+  }
+
+  .experience-list {
+    padding-left: 5em;
+    font-size: 16px;
+      
+    > li {
+      margin-bottom: $spacing-unit/4;
+    }
+  }
+
+  .news-list {
+    padding-left: 1em;
+    list-style-position: inside;
+    flex-grow: 1;
+    // font-size: 16px;
+    list-style: none;
+    float: left;
+    margin: 0;
+      
+    > li {
+      margin-bottom: $spacing-unit/4;
+    }
   }
