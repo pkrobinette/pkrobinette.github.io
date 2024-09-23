@@ -637,7 +637,7 @@
    * full screen image
    */
   .full-screen-image {
-    background-image: url('/images/open_road.jpg'); /* Replace with the correct path to your image */
+    background-image: url('/images/tetons.png'); /* Replace with the correct path to your image */
     height: 100vh; /* Full height of the viewport */
     width: 100%; /* Full width */
     background-size: cover; /* Cover the entire area */
@@ -659,8 +659,8 @@
 
 #location-title {
   position: absolute; /* Fix position relative to the viewport */
-  top: 80%; /* Center vertically */
-  left: 43%; /* Center horizontally */
+  top: 55%; /* Center vertically */
+  left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust for the element's own size */
   font-size: 36px; /* Set the font size */
   color: white; /* Set the text color */
